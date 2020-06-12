@@ -1,0 +1,81 @@
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
+@import "components/button";
+@import "components/bg-video";
+@import "components/composition";
+@import "components/card";
+@import "components/feature-box";
+@import "components/form";
+@import "components/story";
+@import "components/popup";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+
+
+@import "pages/home";
+@import "layout/navigation";
+
+
+
+
+*,
+**::after
+**::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+html {
+    // this defines what one rem should be;
+    //font-size: 62.5%;  //1rem =10px; 10px/16px=62.5% 1em=16.5px;
+
+    @include respond(big-desktop) {
+        font-size: 100%;  //1rem=12px, 12/16
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem =9px, 9/16
+    }
+    @include respond(phone) {
+        font-size: 50%;
+    }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+body {
+    box-sizing: border-box;
+
+}
+
+::selection {
+    background-color: $color-grey;
+    color: $color-white;
+}
+
